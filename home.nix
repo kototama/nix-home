@@ -1,5 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
+with lib;
 {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -20,6 +21,8 @@
       epkgs.magit
     ];
   };
+
+  imports = [ ./hosts ];
 
   programs.dircolors.enable = true;
 
