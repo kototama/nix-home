@@ -22,7 +22,7 @@ with lib;
     ];
   };
 
-  imports = [ ./hosts ];
+  programs.ssh.enable = true;
 
   programs.dircolors.enable = true;
 
@@ -37,6 +37,9 @@ with lib;
     source = ~/.config/nixpkgs/home_files/flush-fw.sh;
     target = "local/bin/flush-fw.sh";
   };
+
+  # hosts specific configuration
+  imports = [ ./hosts ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
