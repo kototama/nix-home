@@ -22,23 +22,46 @@ with lib;
     ];
   };
 
-  programs.ssh.enable = true;
-
-  programs.dircolors.enable = true;
-
   fonts.fontconfig.enable = true;
 
+  programs.ssh.enable = true;
+
+  programs.dircolors = {
+    enable = true;
+    enableBashIntegration = true;
+  };
+
+  programs.broot.enable = false;
+
+  programs.bash = {
+    enable = true;
+
+    initExtra = ''
+    source ~/local/bin/prompt.sh
+    '';
+
+    shellAliases = {
+      ll = "ls -l";
+      la = "ls -A";
+    };
+  };
+
   home.file."detectencoding" = {
-    source = ~/.config/nixpkgs/home_files/detectencoding.py;
+    source = ./home_files/detectencoding.py;
     target = "local/bin/detectencoding.py";
   };
 
   home.file."flush-fw" = {
-    source = ~/.config/nixpkgs/home_files/flush-fw.sh;
+    source = ./home_files/flush-fw.sh;
     target = "local/bin/flush-fw.sh";
   };
 
-  # hosts specific configuration
+  home.file."prompt.sh" = {
+    source = ./home_files/prompt.sh;
+    target = "local/bin/prompt.sh";
+  };
+
+  # hosts specific configurations
   imports = [ ./hosts ];
 
   # This value determines the Home Manager release that your
