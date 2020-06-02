@@ -38,11 +38,14 @@ with lib;
 
     initExtra = ''
     source ~/local/bin/prompt.sh
+    source ~/.nix-profile/etc/profile.d/nix.sh
     '';
 
     shellAliases = {
       ll = "ls -l";
       la = "ls -A";
+      e = "emacs";
+      ec = "emacsclient";
     };
   };
 
