@@ -41,6 +41,10 @@ with lib;
     source ~/.nix-profile/etc/profile.d/nix.sh
     '';
 
+    profileExtra = ''
+    export PATH=$PATH:~/local/bin;
+    '';
+
     shellAliases = {
       ll = "ls -l";
       la = "ls -A";
