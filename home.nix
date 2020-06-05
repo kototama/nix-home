@@ -16,9 +16,12 @@ with lib;
 
   programs.emacs = {
     enable = true;
-    extraPackages = epkgs: [
-      epkgs.nix-mode
-      epkgs.magit
+    # packages can be searched with "nix-env -f '<nixpkgs>' -qaP -A emacsPackages"
+    extraPackages = epkgs: with epkgs; [
+      nix-mode
+      magit
+      dumb-jump
+      flycheck-credo
     ];
   };
 
