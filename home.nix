@@ -45,7 +45,7 @@ with lib;
     '';
 
     profileExtra = ''
-    export PATH=$PATH:~/local/bin;
+    export PATH=$PATH:~/local/bin:~/.local/bin;
     '';
 
     shellAliases = {
