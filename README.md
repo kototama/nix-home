@@ -3,10 +3,6 @@
 ## Setup
 
 ```
-# Not necessary because already installed programmatically by Nix?
-# git clone https://github.com/mozilla/nixpkgs-mozilla
-# cd nixpkgs-mozilla
-# ./rust-overlay-install.sh
 cd hosts
 ln -s <host.nix> default.nix
 ```
