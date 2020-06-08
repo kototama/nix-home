@@ -18,10 +18,36 @@ with lib;
     enable = true;
     # packages can be searched with "nix-env -f '<nixpkgs>' -qaP -A emacsPackages"
     extraPackages = epkgs: with epkgs; [
-      nix-mode
-      magit
+      ace-jump-mode
+      ag
+      auto-indent-mode
+      browse-kill-ring
+      clojure-mode
+      company
+      dash
       dumb-jump
+      elixir-mode
+      expand-region
       flycheck-credo
+      magit
+      markdown-mode
+      monokai-theme
+      multiple-cursors
+      nix-mode
+      org
+      paredit
+      projectile
+      protobuf-mode
+      rust-mode
+      smartparens
+      smex
+      undo-tree
+      use-package
+      visual-regexp
+      wgrep
+      whitespace-cleanup-mode
+      yaml-mode
+#      ido-completing-read+
     ];
   };
 
