@@ -49,8 +49,9 @@ with lib;
     '';
 
     shellAliases = {
-      ll = "ls -l";
-      la = "ls -A";
+      ls = "ls --color";
+      ll = "ls -Al --color";
+      la = "ls -A --color";
       e = "emacs";
       ec = "emacsclient";
     };
