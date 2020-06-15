@@ -14,6 +14,11 @@ with lib;
     inconsolata
   ];
 
+  home.sessionVariables = {
+    EDITOR="emacsclient";
+    ALTERNATE_EDITOR = ""; # this will start emacs server if not running when invoking emacsclient
+  };
+
   programs.emacs = {
     enable = true;
     # packages can be searched with "nix-env -f '<nixpkgs>' -qaP -A emacsPackages"
