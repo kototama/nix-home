@@ -31,6 +31,7 @@ with lib;
       company
       dash
       dumb-jump
+      duplicate-thing
       elixir-mode
       expand-region
       flycheck-credo
@@ -52,7 +53,7 @@ with lib;
       wgrep
       whitespace-cleanup-mode
       yaml-mode
-#      ido-completing-read+
+      epkgs."ido-completing-read+"
     ];
   };
 
