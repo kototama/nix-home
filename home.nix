@@ -76,9 +76,11 @@ with lib;
     source ~/.nix-profile/etc/profile.d/nix.sh
     '';
 
-    profileExtra = ''
-    export PATH=$PATH:~/local/bin:~/.local/bin;
-    '';
+    profileExtra =
+      let home = builtins.getEnv "HOME";
+          path = builtins.getEnv "PATH";
+      in
+        "export PATH=${path}:${home}/local/bin:${home}/.local/bin";
 
     shellAliases = {
       ls = "ls --color";
