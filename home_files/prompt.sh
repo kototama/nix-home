@@ -76,7 +76,7 @@ bash_prompt() {
     # extra backslash in front of \$ to make bash colorize the prompt
 }
 
-PROMPT_COMMAND=bash_prompt_command; history -a
+PROMPT_COMMAND=$PROMPT_COMMAND; bash_prompt_command; history -a
 bash_prompt
 unset bash_prompt
 
