@@ -2,6 +2,13 @@
 
 ## Setup
 
+Copy the repo to `~/.config/nixpkgs` with:
+
+```
+git clone <repo> ~/.config/nixpgs
+```
+
+Then setup the specific host configuration of the machine:
 ```
 cd hosts
 ln -s <host.nix> default.nix
