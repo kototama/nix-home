@@ -32,6 +32,7 @@ with lib;
       dash
       dumb-jump
       duplicate-thing
+      erlang
       elixir-mode
       expand-region
       flycheck-credo
