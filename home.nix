@@ -51,9 +51,11 @@ with lib;
       use-package
       visual-regexp
       wgrep
+      wgrep-ag
       whitespace-cleanup-mode
       yaml-mode
       epkgs."ido-completing-read+"
+      outshine
     ];
   };
 
