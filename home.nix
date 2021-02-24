@@ -48,6 +48,7 @@ with lib;
       duplicate-thing
       erlang
       elixir-mode
+      exunit  # elixir unit tests
       expand-region
       flycheck-credo
       magit
