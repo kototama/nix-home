@@ -1,5 +1,19 @@
 { config, pkgs, lib, ... }:
 
+let
+  build_movelines = epkgs: epkgs.trivialBuild {
+    pname = "move-lines";
+    version = "2.0";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "targzeta";
+      repo = "move-lines";
+      rev = "master";
+      sha256 = "0pbvn11n9sw3mg3hpcpc8p80zh53sxyjbhqqxdwbwg8dwpc7r5ij";
+    };
+
+  };
+in
 with lib;
 {
   # Let Home Manager install and manage itself.
@@ -39,6 +53,7 @@ with lib;
       magit
       markdown-mode
       monokai-theme
+      (build_movelines epkgs)
       multiple-cursors
       nix-mode
       org
