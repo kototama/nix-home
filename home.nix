@@ -51,8 +51,10 @@ with lib;
       exunit  # elixir unit tests
       expand-region
       flycheck-credo
+      imenu-anywhere
       magit
       markdown-mode
+      merlin
       monokai-theme
       (build_movelines epkgs)
       multiple-cursors
