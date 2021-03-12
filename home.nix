@@ -123,6 +123,11 @@ with lib;
     target = "local/bin/prompt.sh";
   };
 
+  home.file."elixir.ctags" = {
+    source = ./home_files/dot.ctags;
+    target = ".ctags";
+  };
+
   # hosts specific configurations
   imports = [ ./hosts ];
 
