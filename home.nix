@@ -57,7 +57,8 @@ with lib;
       exunit  # elixir unit tests
       expand-region
       flycheck-credo
-      imenu-anywhere
+      helm
+      # imenu-anywhere
       magit
       markdown-mode
       merlin
@@ -71,7 +72,7 @@ with lib;
       protobuf-mode
       rust-mode
       smartparens
-      smex
+      tuareg
       undo-tree
       use-package
       visual-regexp
@@ -79,6 +80,7 @@ with lib;
       wgrep-ag
       whitespace-cleanup-mode
       yaml-mode
+      yasnippet
       epkgs."ido-completing-read+"
       outshine
     ];
