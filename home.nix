@@ -28,9 +28,10 @@ with lib;
 
   home.packages = with pkgs; [
     inconsolata
+    ctags
 
-    elixir
-    elixir_lsp
+    # elixir
+    # elixir_lsp
 
   ];
 
@@ -52,13 +53,14 @@ with lib;
       dash
       dumb-jump
       duplicate-thing
-      erlang
+      # erlang
+      eglot
       elixir-mode
       exunit  # elixir unit tests
       expand-region
       flycheck-credo
       helm
-      # imenu-anywhere
+      helm-ag
       magit
       markdown-mode
       merlin
@@ -81,7 +83,7 @@ with lib;
       whitespace-cleanup-mode
       yaml-mode
       yasnippet
-      epkgs."ido-completing-read+"
+      # epkgs."ido-completing-read+"
       outshine
     ];
   };
@@ -105,7 +107,7 @@ with lib;
     source ~/.nix-profile/etc/profile.d/nix.sh
     '';
 
-    profileExtra = "export PATH=$PATH:$HOME/local/bin:$HOME/.local/bin";
+    profileExtra = "export PATH=$PATH:$HOME/.cache/rebar3/bin:$HOME/local/bin:$HOME/.local/bin";
 
     shellAliases = {
       ls = "ls --color";
