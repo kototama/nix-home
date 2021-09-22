@@ -1,6 +1,38 @@
 { config, pkgs, lib, ... }:
 
 let
+
+  adr_tools = pkgs.stdenv.mkDerivation {
+    name = "adr-tools";
+
+    version = "3.0.0";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "npryce";
+      repo = "adr-tools";
+      rev = "3.0.0";
+      sha256 = "1igssl6853wagi5050157bbmr9j12703fqfm8cd7gscqwjghnk14";
+    };
+
+    buildPhase = ''
+    echo nothing to build
+  '';
+
+    installPhase = ''
+    mkdir -p $out/bin
+    cp -R ./src/. $out/bin/
+  '';
+
+
+    meta = {
+      homepage = https://github.com/npryce/adr-tools;
+      description = "Command-line tools for working with Architecture Decision Records ";
+      license = lib.licenses.cc-by-40;
+      # maintainers = [ lib.maintainers.matklad ];
+    };
+
+  };
+
   elixir_lsp = pkgs.beam.packages.erlang.callPackage ./packages/elixir-lsp {};
 
   build_movelines = epkgs: epkgs.trivialBuild {
@@ -41,6 +73,8 @@ with lib;
   home.homeDirectory = "/home/user";
 
   home.packages = with pkgs; [
+    adr_tools
+
     inconsolata
     ctags
     sbcl
