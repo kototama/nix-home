@@ -15,6 +15,20 @@ let
     };
 
   };
+
+  slime_company = epkgs: epkgs.trivialBuild {
+    pname = "slime-company";
+    version = "1.6";
+
+    src = pkgs.fetchFromGitHub {
+      owner = "anwyn";
+      repo = "slime-company";
+      rev = "master";
+      sha256 = "0pbvn11n9sw3mg3hpcpc8p80zh53sxyjbhqqxdwbwg8dwpc7r5ij";
+    };
+
+  };
+
 in
 with lib;
 {
@@ -29,7 +43,8 @@ with lib;
   home.packages = with pkgs; [
     inconsolata
     ctags
-
+    sbcl
+    lispPackages.quicklisp
     # elixir
     # elixir_lsp
 
@@ -73,6 +88,8 @@ with lib;
       projectile
       protobuf-mode
       rust-mode
+      slime
+      slime-company
       smartparens
       tuareg
       undo-tree
