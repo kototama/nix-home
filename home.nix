@@ -73,7 +73,10 @@ with lib;
   home.homeDirectory = "/home/user";
 
   home.packages = with pkgs; [
-    # For Emacs
+    # Nix
+    niv
+
+    # Emacs
     inconsolata
     ctags
 
