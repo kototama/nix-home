@@ -73,15 +73,26 @@ with lib;
   home.homeDirectory = "/home/user";
 
   home.packages = with pkgs; [
-    adr_tools
-
+    # For Emacs
     inconsolata
     ctags
+
+    # Common Lisp
     sbcl
     lispPackages.quicklisp
+
     # elixir
     # elixir_lsp
 
+    # Clojure
+    leiningen
+
+    # Ergodox EZ
+    qmk
+    teensy-loader-cli
+
+    # ADR CLI tools
+    adr_tools
   ];
 
   home.sessionVariables = {
@@ -99,6 +110,7 @@ with lib;
       browse-kill-ring
       clojure-mode
       company
+      cider
       dash
       dumb-jump
       duplicate-thing
@@ -158,7 +170,7 @@ with lib;
     source ~/.nix-profile/etc/profile.d/nix.sh
     '';
 
-    profileExtra = "export PATH=$PATH:$HOME/.cache/rebar3/bin:$HOME/local/bin:$HOME/.local/bin";
+    profileExtra = "export PATH=$PATH:$HOME/.cache/rebar3/bin:$HOME/local/bin:$HOME/.local/bin:$HOME/projects/extern/elixir-ls/myrelease";
 
     shellAliases = {
       ls = "ls --color";
