@@ -5,12 +5,13 @@
 Copy the repo to `~/.config/nixpkgs` with:
 
 ```
-git clone <repo> ~/.config/nixpgs
+git clone git@github.com:kototama/.emacs.d.git ~/.config/nixpkgs
 ```
 
 Then setup the specific host configuration of the machine:
 ```
-cd hosts
+cd .config/nixpkgs/hosts
+cp ci.nix <host.nix>
 ln -s <host.nix> default.nix
 ```
 
