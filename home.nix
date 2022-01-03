@@ -115,6 +115,9 @@ with lib;
       company
       cider
       dash
+
+      # diminish
+
       dumb-jump
       duplicate-thing
       # erlang
@@ -134,6 +137,13 @@ with lib;
       nix-mode
       org
       paredit
+
+      doom-modeline
+      # mood-line
+      # powerline
+      # spaceline
+      # simple-modeline
+
       projectile
       protobuf-mode
       rust-mode
