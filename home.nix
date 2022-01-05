@@ -215,7 +215,7 @@ with lib;
   };
 
   # hosts specific configurations
-  imports = [ ./hosts ];
+  imports = [ hosts/default.nix ];
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
