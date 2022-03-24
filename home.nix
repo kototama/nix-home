@@ -96,6 +96,8 @@ with lib;
 
     # ADR CLI tools
     adr_tools
+
+    emacs-all-the-icons-fonts
   ];
 
   home.sessionVariables = {
