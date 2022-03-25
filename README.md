@@ -5,14 +5,15 @@
 Copy the repo to `~/.config/nixpkgs` with:
 
 ```
-git clone git@github.com:kototama/.emacs.d.git ~/.config/nixpkgs
+GIT_SSH_COMMAND='ssh -i ~/.ssh/<key> -o IdentitiesOnly=yes' git clone git@github.com:kototama/.emacs.d.git ~/.config/nixpkgs
 ```
 
 Then setup the specific host configuration of the machine:
 ```
-cd .config/nixpkgs/hosts
-cp ci.nix <host.nix>
-ln -s <host.nix> default.nix
+cd .config/nixpkgs
+git config --add --local core.sshCommand 'ssh -i ~/.ssh/<sshkey>'
+cd hosts
+ln -s <host>/config.nix default.nix
 ```
 
 ## Inspirations
