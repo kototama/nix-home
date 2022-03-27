@@ -216,6 +216,11 @@ with lib;
     target = ".ctags";
   };
 
+  home.file."user-dirs.dirs" = {
+    source = ./home_files/user-dirs.dirs;
+    target = ".config/user-dirs.dirs";
+  };
+
   # hosts specific configurations
   imports = [ hosts/default.nix ];
 
