@@ -95,6 +95,9 @@ with lib;
     # ADR CLI tools
     adr_tools
 
+    # Bash
+    shellcheck
+
     emacs-all-the-icons-fonts
   ];
 
