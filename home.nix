@@ -33,8 +33,6 @@ let
 
   };
 
-  elixir_lsp = pkgs.beam.packages.erlang.callPackage ./packages/elixir-lsp {};
-
   build_movelines = epkgs: epkgs.trivialBuild {
     pname = "move-lines";
     version = "2.0";
@@ -85,7 +83,7 @@ with lib;
     lispPackages.quicklisp
 
     # elixir
-    # elixir_lsp
+    beam.packages.erlangR23.elixir_ls
 
     # Clojure
     leiningen
