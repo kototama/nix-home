@@ -186,7 +186,7 @@ with lib;
     # source ~/.nix-profile/etc/profile.d/nix.sh
     '';
 
-    profileExtra = "export PATH=$PATH:$HOME/.cache/rebar3/bin:$HOME/local/bin:$HOME/.local/bin:$HOME/projects/extern/elixir-ls/myrelease";
+    profileExtra = "export PATH=$PATH:$HOME/.cache/rebar3/bin:$HOME/local/bin:$HOME/.local/bin:$HOME/projects/extern/elixir-ls/myrelease:$HOME/local/bin";
 
     shellAliases = {
       ls = "ls --color";
