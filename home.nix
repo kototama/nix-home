@@ -197,7 +197,7 @@ with lib;
 
     initExtra = ''
     source ~/local/bin/prompt.sh
-    # source ~/.nix-profile/etc/profile.d/nix.sh
+    source ~/.nix-profile/etc/profile.d/hm-session-vars.sh
     '';
 
     profileExtra = "export PATH=$PATH:$HOME/.cache/rebar3/bin:$HOME/local/bin:$HOME/.local/bin:$HOME/projects/extern/elixir-ls/myrelease:$HOME/local/bin";
