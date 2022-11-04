@@ -70,6 +70,20 @@ with lib;
   home.username = "user";
   home.homeDirectory = "/home/user";
 
+  # Run after install:
+  # systemctl --user enable pueued
+  services.pueue.enable = true;
+  services.pueue.settings = {
+
+    shared = {
+      pueue_directory = "/home/user/.local/share/pueue";
+    };
+
+    daemon = {
+      default_parallel_tasks = 8;
+    };
+  };
+
   home.packages = with pkgs; [
     # Nix
     niv
