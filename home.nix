@@ -190,7 +190,9 @@ with lib;
     enableBashIntegration = true;
   };
 
-  programs.broot.enable = false;
+
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
 
   programs.bash = {
     enable = true;
