@@ -160,6 +160,7 @@ with lib;
       # powerline
       # spaceline
       # simple-modeline
+      web-mode
 
       projectile
       protobuf-mode
