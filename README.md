@@ -1,5 +1,7 @@
 # Configuration for home-manager
 
+** This is deprecated and not in used anymore **
+
 ## Setup
 
 Copy the repo to `~/.config/nixpkgs` with:
